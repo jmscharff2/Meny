@@ -49,6 +49,67 @@ h2 {
 	font-size: 24px;
 }
 
+
+.top-meny {
+	display: none;
+	padding: 20px;
+	overflow: auto;
+	background: #333;
+	color: #eee;
+
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+	.top-meny ul {
+		margin-top: 10px;
+	}
+		.top-meny ul li {
+			display: inline-block;
+			width: 200px;
+			list-style: none;
+			font-size: 20px;
+			padding: 3px 10px;
+		}
+			.top-meny ul li:before {
+				content: '-';
+				margin-right: 5px;
+				color: rgba( 255, 255, 255, 0.2 );
+			}
+.top-meny-arrow {
+	position: absolute;
+	z-index: 10;
+
+	border: 10px solid transparent;
+
+	-webkit-transition: opacity 0.4s ease 0.4s; 
+	   -moz-transition: opacity 0.4s ease 0.4s; 
+	    -ms-transition: opacity 0.4s ease 0.4s; 
+	     -o-transition: opacity 0.4s ease 0.4s; 
+	        transition: opacity 0.4s ease 0.4s;
+}
+	.top-meny-top .meny-arrow {
+		left: 50%;
+		top: 14px;
+		margin-left: -16px;
+		border-top: 16px solid #333;
+	}
+		.top-meny-active .meny-arrow {
+		opacity: 0;
+
+		-webkit-transition: opacity 0.2s ease; 
+		   -moz-transition: opacity 0.2s ease; 
+		    -ms-transition: opacity 0.2s ease; 
+		     -o-transition: opacity 0.2s ease; 
+		        transition: opacity 0.2s ease;
+	}
+
+
+
+
+
+
+
 .meny {
 	display: none;
 	padding: 20px;
