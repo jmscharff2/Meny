@@ -14,6 +14,7 @@
 		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 		
 		<link rel="stylesheet" href="css/demo.css">
+		<script src="js/top_meny.js"></script>
 	</head>
 	
 	<body>
@@ -49,7 +50,8 @@
 		</div>
 		<!-- End Top Navigation !-->
 
-		<div class="meny-arrow"></div>
+
+		<div class="top-meny-arrow"></div>
 
 		<div class="contents">
 			<article>
@@ -89,10 +91,31 @@
 		</div>
 
 		<script src="js/meny.min.js"></script>
-		<script src="js/top_meny.js"></script>
+		
 		<script>
 		
 			
+			//Create an instance of Top_Many
+			var top_meny = Top_Meny.create({
+				// The element that will be animated in from off screen
+				menuElement: document.querySelector( '.top-meny' ),
+
+				// The contents that gets pushed aside while Meny is active
+				contentsElement: document.querySelector( '.contents' ),
+				//contentsElement: document.querySelector( '.meny'),
+
+				// [optional] The alignment of the menu (top/right/bottom/left)
+				position: 'top',
+
+				// [optional] The height of the menu (when using top/bottom position)
+				height: 200,
+
+				// [optional] The width of the menu (when using left/right position)
+				width: 260,
+
+				// [optional] Distance from mouse (in pixels) when menu should open
+				threshold: 40
+			});
 
 		
 			// Create an instance of Meny
@@ -116,27 +139,7 @@
 				threshold: 40
 			});
 			
-			var top_meny = Top_Meny.create({
-				// The element that will be animated in from off screen
-				menuElement: document.querySelector( '.top-meny' ),
-
-				// The contents that gets pushed aside while Meny is active
-				contentsElement: document.querySelector( '.contents' ),
-				//contentsElement: document.querySelector( '.meny'),
-
-				// [optional] The alignment of the menu (top/right/bottom/left)
-				position: 'top',
-
-				// [optional] The height of the menu (when using top/bottom position)
-				height: 200,
-
-				// [optional] The width of the menu (when using left/right position)
-				width: 260,
-
-				// [optional] Distance from mouse (in pixels) when menu should open
-				threshold: 40
-			});
-
+			
 			// API Methods:
 			// meny.open();
 			// meny.close();

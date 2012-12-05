@@ -165,7 +165,7 @@ var Top_Meny = {
 			function setupWrapper() {
 				// Add a class to allow for custom styles based on 
 				// position
-				Top_Meny.addClass( dom.wrapper, 'meny_top-' + config.position );
+				Top_Meny.addClass( dom.wrapper, 'top-meny-' + config.position );
 
 				dom.wrapper.style[ Top_Meny.prefix( 'perspective' ) ] = '800px';
 				dom.wrapper.style[ Top_Meny.prefix( 'perspectiveOrigin' ) ] = contentsTransformOrigin;
@@ -291,7 +291,7 @@ var Top_Meny = {
 				if( !isOpen ) {
 					isOpen = true;
 
-					Top_Meny.addClass( dom.wrapper, 'meny_top-active' );
+					Top_Meny.addClass( dom.wrapper, 'top-meny-active' );
 
 					dom.cover.style.height = dom.contents.scrollHeight + 'px';
 					dom.cover.style.visibility = 'visible';
@@ -324,7 +324,7 @@ var Top_Meny = {
 				if( isOpen ) {
 					isOpen = false;
 
-					Top_Meny.removeClass( dom.wrapper, 'meny_top-active' );
+					Top_Meny.removeClass( dom.wrapper, 'top-meny-active' );
 
 					// Use transforms and transitions if available...
 					if( supports3DTransforms ) {
