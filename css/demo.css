@@ -49,6 +49,10 @@ h2 {
 	font-size: 24px;
 }
 
+banner{
+    background: #4888c7;
+    color:#eee;
+}
 
 .top-meny {
 	display: none;
@@ -203,6 +207,7 @@ h2 {
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
 }
+
 	.contents>article {
 		max-width: 400px;
 	}
