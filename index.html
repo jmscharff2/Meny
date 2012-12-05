@@ -47,6 +47,11 @@
 				<li><a href="http://lab.hakim.se/scroll-effects/">Upload</a></li>
 				<li><a href="http://lab.hakim.se/zoom-js">Friends</a></li>
 				<li><a href="http://lab.hakim.se/zoom-js">Search Friends</a></li>
+				<form action = "login.php" method ="post">
+				<input type="text" name="username" id="username" class="placeholder" placeholder="username"/>
+				<input type="password" name="password" id="password" class="placeholder" placeholder="password" onkeypress="return submitenter(this,event)"/>
+				<input type="submit" name="login" value="Submit"hidden="true"/>  
+				</form>
 				
 			</ul>
 		</div>
