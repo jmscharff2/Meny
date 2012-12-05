@@ -16,7 +16,10 @@ Meny requires two HTML elements to work: a **menu** and the page **contents**. T
 ```html
 <body>
   <div class="meny">
-    <!-- your menu items -->
+    <!-- your side menu items -->
+  </div>
+  <div class="top-meny">
+  	<!-- your top menu items go here -->
   </div>
   <div class="contents">
     <!-- your page contents -->
@@ -45,6 +48,23 @@ var meny = Meny.create({
 
 	// The alignment of the menu (top/right/bottom/left)
 	position: 'left',
+
+	// The height of the menu (when using top/bottom position)
+	height: 200,
+
+	// The width of the menu (when using left/right position)
+	width: 260
+});
+
+var top_meny = Top_Meny.create({
+	// The element that will be animated in from off screen
+	menuElement: document.querySelector( '.top-meny' ),
+
+	// The contents that gets pushed aside while Meny is active
+	contentsElement: document.querySelector( '.contents' ),
+
+	// The alignment of the menu (top/right/bottom/left)
+	position: 'top',
 
 	// The height of the menu (when using top/bottom position)
 	height: 200,
